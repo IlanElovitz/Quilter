@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <title>Quilter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="top-container">
+      <div class="square-scale-container">
+        <label>Square Scale:</label>
+        <button id="b-decrease-scale">-</button>
+        <button id="b-increase-scale">+</button>
+      </div>
+      <label for="s-grid">Grid:</label>
+      <select id="s-grid">
+        <option>Hide</option>
+        <option>Show Borders</option>
+        <option>Show</option>
+      </select>
+    </div>
+    <main>
+      <div class="transforms-container one">
+        <button id="b-rotate" title="rotate 90° clockwise">
+          <img src="Icons/rotate.svg">
+        </button>
+        <button id="b-expand" title="expand">
+          <img src="Icons/expand.svg">
+        </button>
+        <button id="b-contract" title="contract">
+          <img src="Icons/contract.svg">
+        </button>
+        <button id="b-shift-right" title="shift left">
+          <img src="Icons/shiftRight.svg">
+        </button>
+        <button id="b-shift-down" title="shift down">
+          <img src="Icons/shiftDown.svg">
+        </button>
+        <button id="b-subdivide" title="subdivide">
+          <img src="Icons/subdivide.svg">
+        </button>
+        <button id="b-unsubdivide" title="unsubdivide">
+          <img src="Icons/unsubdivide.svg">
+        </button>
+        <div class="spacer"></div>
+        <div class="width-buttons">
+          <button class="b-minus" title="shrink viewport">-</button>
+          <button class="b-plus" title="extend viewport">+</button>
+        </div>
+      </div>
+      <div class="transforms-container two">
+        <button id="b-flip-horizontal" title="flip horizontal">
+          <img src="Icons/flipHorizontal.svg">
+        </button>
+        <button id="b-flip-vertical" title="flip vertical">
+          <img src="Icons/flipVertical.svg">
+        </button>
+        <button id="b-fill" title="fill">▧</button>
+        <div class="spacer"></div>
+        <div class="height-buttons">
+          <button class="b-minus" title="shrink viewport">-</button>
+          <button class="b-plus" title="extend viewport">+</button>
+        </div>
+      </div>
+      <div class="display">
+        <div class="display-one">
+          <span class="canvas-container"></span>
+          <ul class="colors-container"></ul>
+        </div>
+        <div class="display-two">
+          <span class="bottom-container">
+            <div class="current-color-container"></div>
+            <div class="menu-container">
+              <div class="save-container">
+                <input id="i-file-name" value="" type="text" title="input file name">
+                <button id="b-save" title="download pattern file">Save Pattern</button>
+              </div>
+              <div class="load-container"></div>
+              <br>
+              <div class="undo-redo-container">
+                <button id="b-undo" title="undo">↶</button>
+                <button id="b-redo" title="redo">↷</button>
+              </div>
+            </div>
+          </span>
+          <span class="layout-container"></span>
+        </div>
+      </div>
+    </main>
+    <script src="sketch.js"></script>
+  
+
+</body></html>
